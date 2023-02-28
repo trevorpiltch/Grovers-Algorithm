@@ -1,6 +1,6 @@
 # Grovers Algorithm
 ## How to use
-Download qiskit: `sudo pip install Qiskit==0.24.1` **MUST BE VERSION 0.24.1**<br>
+Download qiskit: `sudo pip install Qiskit==0.24.1` (**MUST BE VERSION 0.24.1**)
 Ignore warnings: run with the `-W ignore::DeprecationWarning` command
 
 ## Implementation Functions
