@@ -4,23 +4,24 @@ Download qiskit: `sudo pip install Qiskit==0.24.1` (**MUST BE VERSION 0.24.1**) 
 Ignore warnings: run with the `-W ignore::DeprecationWarning` command
 
 ## Implementation Functions
+Credit to Saasha Joshi for their (repo)[https://github.com/SaashaJoshi/grovers-algorithm] that showed the implementations of these functions. <br>
 ### Oracle
-Creates the Grovers oracle based on the target qubit. This is the limiting function here, as it runs in O(n) terms not O(1) as described. Future updates might fix this but limitations in Qiskit prevent this for now.
+Creates the Grovers oracle based on the target qubit. This is the limiting function here, as it runs in O(n) terms not O(1) as described. Future updates might fix this but limitations in Qiskit prevent it now.
 
 ### Amplification
-Creates the diffuser gate based on V and V-dagger gates
+Creates the diffuser gate based on V and V-dagger gates.
 
 ### Init
 Prepares the given qubits so they're ready for the algorithm.
 
 ### Grover
-Combines the oracle and amplification gates into a grovers algorithm circuit
+Combines the oracle and amplification gates into a grovers algorithm circuit.
 
 ### Run
-Combines all the above functions to run the algorithm <br>
+Combines all the above functions to run the algorithm. <br>
 
 ### Target 
-Asks for inputs on the command line for the number of qubits to use (must be a power of 2) and target number (must be in the range 0...2^n)
+Asks for inputs on the command line for the number of qubits to use (must be a power of 2) and target number (must be in the range 0...2^n).
 
 ## About
 ### What is it?
