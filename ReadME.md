@@ -4,7 +4,7 @@ Download qiskit: `sudo pip install Qiskit==0.24.1` (**MUST BE VERSION 0.24.1**) 
 Ignore warnings: run with the `-W ignore::DeprecationWarning` command
 
 ## Implementation Functions
-Credit to Saasha Joshi for their (repo)[https://github.com/SaashaJoshi/grovers-algorithm] that showed the implementations of these functions. <br>
+Credit to Saasha Joshi for their [repo](https://github.com/SaashaJoshi/grovers-algorithm) that showed the implementations of these functions. <br>
 ### Oracle
 Creates the Grovers oracle based on the target qubit. This is the limiting function here, as it runs in O(n) terms not O(1) as described. Future updates might fix this but limitations in Qiskit prevent it now.
 
