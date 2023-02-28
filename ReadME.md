@@ -3,7 +3,7 @@
 Grover’s Algorithm is an unstructured search algorithm that runs in √N with √N \*log(N) gates on a quantum computer. Lov Grover created the algorithm in 1996 while at Bell Labs.
 
 ## How does it work?
-For simplification, we’re assuming the database has 2n terms (which we’ll label N). We’ll label the state we’re searching for x\* and all other states x. From here, Grover’s algorithm is split into two sections: the Oracle and Phase Amplification. 
+For simplification, we’re assuming the database has 2^n terms (which we’ll label N). We’ll label the state we’re searching for x\* and all other states x. From here, Grover’s algorithm is split into two sections: the Oracle and Phase Amplification. 
 
 ### Oracle
 The oracle is a diagonal quantum gate that flips the sign of x\* to negative and all other states positive. For example, if we had N = 4 terms and x\* = |11\> then the oracle would look as the first matrix below.
