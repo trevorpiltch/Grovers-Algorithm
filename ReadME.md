@@ -23,5 +23,5 @@ To start, we initialize N qubits in the super position given in the previous sec
 
 ## Sources
 [Grovers Algorithm](https://qiskit.org/textbook/ch-algorithms/grover.html#3.-Example:-3-Qubits-) <br>
-[Original Paper](https://arxiv.org/pdf/quant-ph/9605043.pdf)
+[Original Paper](https://arxiv.org/pdf/quant-ph/9605043.pdf) <br>
 [CMU Lecture Paper](https://www.cs.cmu.edu/~odonnell/quantum15/lecture04.pdf)
