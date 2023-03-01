@@ -3,7 +3,9 @@ from oracle import *
 from amplifier import *
 from init import *
 from args import *
+from results import *
 import time
+
 
 def grover(circuit, n, target_binary, oracle, amplifier):
     """Applies the oracle and amplification on the circuit"""
@@ -14,7 +16,6 @@ def grover(circuit, n, target_binary, oracle, amplifier):
 
 def run(n, target_binary):
     """Runs grovers algorithm with target binary"""
-    print("--Running Algorithm--")
     qc = QuantumCircuit(n + 1, n)
 
     byte = "{0:0%ib}" % n
@@ -29,23 +30,21 @@ def run(n, target_binary):
 
     seconds = (time.time() - start_time)
 
-    grover(qc, n, target_binary, oracle_gate, amplifier_gate)
-    grover(qc, n, target_binary, oracle_gate, amplifier_gate)
+    for  _ in range(0, int(N ** (1/2))):
+        grover(qc, n, target_binary, oracle_gate, amplifier_gate)
 
     qc.barrier()
     qc.measure(range(n), range(n))
 
-    backend = Aer.get_backend('qasm_simulator')
+    result = get_result(qc)
+    max = parse_result(result, p=False)
 
-    results = execute(qc, backend, shots = 1024).result()
-    counts = results.get_counts()
-    print(counts)
+    print("\n--Results--")
 
-    print("\nProgram took %s seconds" % seconds)
+    print("Most probable result was: " + str(max[0]) + " with " + str(max[1]) + " occurences.")
 
+    print("Program took %s seconds\n" % seconds)
 
-#TODO: Add command line args for num and target or use random
-#TODO: Add result parsing
 print("--Deprecation warnings--")
 
 print("\n--Setup--")

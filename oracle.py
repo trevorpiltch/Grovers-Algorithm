@@ -8,7 +8,10 @@ def oracle(n, target_binary):
         if value == '0':
             circuit.x(n-1-index)
 
-    cbits = [0, 1, 2, 3]
+    cbits = []
+    for i in range(n):
+        cbits.append(i)
+
     circuit.mct(cbits, n, n)
 
     for index, value in enumerate(target_binary):
